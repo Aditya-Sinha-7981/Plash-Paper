@@ -7,34 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="wallpaper_area">
-        <img class="wall active" src="images/wallpaper1.jpg">
-        <img class="wall" src="">
-    </section>
+    <div id="backgroundDiv" class="background-element"></div>
 
 
-    <script>
-        const wallpapers = [
-            "images/wallpaper1.jpg",
-            "images/wallpaper2.webp"
-        ];
-
-        let index = 0;
-
-        const walls = document.querySelectorAll(".wall");
-
-        function changeWallpaper() {
-            index = (index + 1) % wallpapers.length;
-
-            const current = document.querySelector(".wall.active");
-            const next = [...walls].find(w => !w.classList.contains("active"));
-
-            next.src = wallpapers[index];
-            next.classList.add("active");
-            current.classList.remove("active");
-        }
-
-        setInterval(changeWallpaper, 5000); // faster so you can see it
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
