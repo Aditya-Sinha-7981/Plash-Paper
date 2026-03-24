@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+}
+
+.wallpaper_area {
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  overflow: hidden;
+  position: relative;
+}
+.wallpaper_area .wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
+  transform: scale(1.05);
+}
+.wallpaper_area .wall.active {
+  opacity: 1;
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */
