@@ -1,5 +1,5 @@
 const wallpapers = [
-    "bgs/wallpaper1.jpg",
+    // "bgs/wallpaper1.jpg",
     "bgs/wallpaper2.webp"
 ];
 const background = document.querySelector("#backgroundDiv");
@@ -9,7 +9,7 @@ let currentDay = `${dayObject.getDate()}-${dayObject.getMonth() + 1}-${dayObject
 // Always gives an index value based on current date
 let imageIndex = (generateHash(currentDay) % wallpapers.length)
 
-background.style.backgroundImage = `url(${wallpapers[imageIndex]})`
+background.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${wallpapers[imageIndex]})`
 
 
 function generateHash(string) {

@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="backgroundDiv" class="background-element"></div>
-
+    <div class="layer0">
+        <div id="backgroundDiv" class="background-element"></div>
+        <div class="overlay-div"></div>
+    </div>
+    <div class="layer1">
+        <canvas id="drawCanvas"></canvas>
+    </div>
 
     <script src="script.js"></script>
+    <script src="engine.js"></script>
 </body>
 </html>
